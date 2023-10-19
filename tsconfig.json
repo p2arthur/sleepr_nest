@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    
     "module": "commonjs",
     "declaration": true,
     "removeComments": true,
@@ -25,12 +24,15 @@
       "@app/common/*": [
         "libs/common/src/*"
       ]
-    }
-  },
+    },
 
-  "watchOptions": {
-    "watchFile": "dynamicPriorityPolling",
-    "watchDirectory": "dynamicPriorityPolling",
-    "excludeDirectories": ["**/node_modules", "dist"]
-  }
+  },
+  "watchOptions": {  
+  "watchFile": "priorityPollingInterval",
+  "watchDirectory": "dynamicprioritypolling",
+  "fallbackPolling": "dynamicPriority",
+  "synchronousWatchDirectory": true,
+  "excludeDirectories": ["**/node_modules", "dist"]
+}
+
 }
