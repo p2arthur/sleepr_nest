@@ -1,11 +1,11 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/slepr-app/src",
+  "sourceRoot": "apps/reservations/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/slepr-app/tsconfig.app.json"
+    "tsConfigPath": "apps/reservations/tsconfig.app.json"
   },
   "projects": {
     "common": {
@@ -15,15 +15,6 @@
       "sourceRoot": "libs/common/src",
       "compilerOptions": {
         "tsConfigPath": "libs/common/tsconfig.lib.json"
-      }
-    },
-    "slepr-app": {
-      "type": "application",
-      "root": "apps/slepr-app",
-      "entryFile": "main",
-      "sourceRoot": "apps/slepr-app/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/slepr-app/tsconfig.app.json"
       }
     },
     "reservations": {
@@ -37,5 +28,5 @@
     }
   },
   "monorepo": true,
-  "root": "apps/slepr-app"
+  "root": "apps/reservations"
 }
