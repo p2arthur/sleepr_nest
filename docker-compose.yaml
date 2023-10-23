@@ -1,4 +1,10 @@
 services:
+
+  mongo:
+    image: mongo:latest
+    ports:
+      - '27017:27017'
+
   reservations:
     build:
       context: .
@@ -9,6 +15,5 @@ services:
       - '3000:3000'
     volumes:
       - /usr/app/node_modules
-
-  mongo:
-    image: mongo
+    depends_on:
+      - mongo
